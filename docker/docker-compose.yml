@@ -7,9 +7,8 @@ services:
             - ../.env
         volumes:
             - '../logs/:/app/storage/logs/'
-            - '../entities/:/app/entities/'
-            - '../mails/:/app/mails/'
-            - '../config/:/app/config/'
+            # Code propre au projet (entités, mails, config, scripts, libs), voir custom/README.md
+            - '../custom/:/app/custom/'
         labels:
             - "traefik.enable=true"
             - "traefik.docker.network=traefik-network"
